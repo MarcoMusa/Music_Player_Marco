@@ -1,10 +1,16 @@
 :root {
-  --main-color: #fec846;
+  --main-color: #fecc88;
   --accent-color: #c64aa8;
+  --secondary-color: #c05746;
+  --blu: #202f40;
+}
+
+.text-color {
+  color: var(--main-color);
 }
 
 body {
-  background-image: url("./media/fotobody.jpeg");
+  background-image: url("./media/body3.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -16,25 +22,81 @@ body {
 }
 
 .main-wrapper {
-  background: linear-gradient(126deg, #fec74648, #c64aa748);
-  backdrop-filter: blur(5px);
+  background: linear-gradient(126deg, #34719580, #202f4080);
+  backdrop-filter: blur(10px);
   border-radius: 10px;
   height: 300px;
 }
 
 .btn-sidebar {
   border-radius: 100%;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.3);
+  color: var(--main-color);
+  background-color: rgba(52, 113, 149, 0.3);
   height: 50px;
   width: 50px;
   transition: 0.3s;
 }
 
 .btn-sidebar:hover {
-  color: var(--accent-color);
+  color: white;
 }
 
 .btn-sidebar.active {
-  background-color: var(--main-color);
+  background-color: var(--blu);
+}
+
+.album-cover {
+  border-radius: 50%;
+  width: 50%;
+  max-width: 300px;
+}
+
+.album-cover.play {
+  border-radius: 100%;
+  width: 80%;
+  animation-name: play;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes play {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-wrapper {
+    height: auto;
+  }
+}
+
+.btn-play {
+  color: #fecc88;
+  font-size: 40px;
+}
+
+.btn-play:hover {
+  color: var(--blu);
+  font-size: 40px;
+  transform: scale(1.1);
+}
+
+.btn-pausa {
+  color: var(--main-color);
+  font-size: 40px;
+}
+
+.btn-pausa:hover {
+  color: var(--blu);
+  font-size: 40px;
+  transform: scale(1.1);
+}
+
+.progress-bar {
+  background-color: var(--blu);
 }
