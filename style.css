@@ -1,0 +1,40 @@
+:root {
+  --main-color: #fec846;
+  --accent-color: #c64aa8;
+}
+
+body {
+  background-image: url("./media/fotobody.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.main-wrapper {
+  background: linear-gradient(126deg, #fec74648, #c64aa748);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  height: 300px;
+}
+
+.btn-sidebar {
+  border-radius: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 50px;
+  width: 50px;
+  transition: 0.3s;
+}
+
+.btn-sidebar:hover {
+  color: var(--accent-color);
+}
+
+.btn-sidebar.active {
+  background-color: var(--main-color);
+}
